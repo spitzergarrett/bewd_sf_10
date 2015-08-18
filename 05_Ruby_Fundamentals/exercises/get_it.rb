@@ -19,6 +19,7 @@ def connect_to_api(url)
   JSON.parse(response)
 end
 
+<<<<<<< HEAD
 def find_stories(response)
   stories = response["data"]["children"]
   puts "*************Reddit has blessed us with #{stories.count} stories ***********"
@@ -41,3 +42,34 @@ reddit_url = "http://www.reddit.com/.json"
 reddit_json_response = connect_to_api(reddit_url)
 stories = find_stories(reddit_json_response)
 print_stories(stories)
+||||||| merged common ancestors
+reddit_url = "http://www.reddit.com/.json"
+connect_to_api(reddit_url)
+=======
+def find_stories(response)
+  stories = response["data"]["children"]
+  puts "*******Reddit has blessed us with #{stories.count} stories *******"
+  return stories
+end
+
+def print_stories(stories)
+  stories.each do |story|
+    create_story_hash(story["data"])
+  end
+end
+
+def create_story_hash(story)
+  {category: story["subreddit"], title: story["title"], upvotes: story["ups"]}
+end
+
+reddit_url ="http://www.reddit.com/.json"
+reddit_json_response = connect_to_api(reddit_url)
+stories = find_stories(reddit_json_response)
+print_stories(stories)
+
+
+
+
+
+#####
+>>>>>>> 43d933dfc339dccb02a330db173fa830015e4326
