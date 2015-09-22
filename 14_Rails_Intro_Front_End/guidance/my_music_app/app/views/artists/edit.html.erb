@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 <div class="panel_body">
 <%- attributes.each do |attribute| -%>
   <%%= f.<%= attribute.reference? ? :association : :input %> :<%= attribute.name %> %>
 <%- end -%>
 </div>
+||||||| merged common ancestors
+=======
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1> Edit <%=@artist.name %>  </h1>
+  </div>
+ <%= render 'form' %>
+</div>
+>>>>>>> f5a691ef6e2a2b9a8644d9a2e4fcc7913dfea728

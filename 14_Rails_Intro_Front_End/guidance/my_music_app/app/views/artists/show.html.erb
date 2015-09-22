@@ -1,2 +1,27 @@
+<<<<<<< HEAD
 <h1>Artists#show</h1>
 <p>Find me in app/views/artists/show.html.erb</p>
+||||||| merged common ancestors
+=======
+<div class="row-fluid">
+  <div class="panel panel-default">
+  <div class="col-md-6">
+    <%=image_tag(@artist.image_url, class: "img-responsive thumbnail") %>
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1> <%= @artist.name%>
+          <%=link_to "All Artists", artists_path, class: 'btn btn-default btn-xs'%>
+        </h1>
+      </div>
+      <div class="panel-body">
+        <p> <%= @artist.description %> </p>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+>>>>>>> f5a691ef6e2a2b9a8644d9a2e4fcc7913dfea728

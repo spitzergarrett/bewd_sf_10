@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   root 'static_pages#home'
 
 resources :artists
@@ -7,6 +8,17 @@ resources :artists
   get 'test', to: "static_pages#test", as: "test"
 
 
+||||||| merged common ancestors
+=======
+
+  resources :artists
+  #establish a custom route
+  get 'about', to: "static_pages#about", as: "about"
+  get 'test', to: "static_pages#test", as: "test"
+ #establish a root_path
+  root 'static_pages#home'
+
+>>>>>>> f5a691ef6e2a2b9a8644d9a2e4fcc7913dfea728
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
